@@ -18,9 +18,9 @@ app.add_middleware(
     allow_origins=[
     "*",
     "http://localhost:5173",
-    "https://askmynotes-frontend-6k6v.onrender.com",
+    "https://askmynotes-frontend-5k8w.onrender.com",
 ],
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
