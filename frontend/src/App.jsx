@@ -21,17 +21,19 @@ function App() {
     setAnswer("");
 
     try {
-      const response = await fetch("http://localhost:8000/ask", {
-        method: "POST",
+      const response = await fetch(
+  "https://askmynotes-backend-1-qz0j.onrender.com/ask",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      question: cleanedQuestion,
+    }),
+  }
+);
 
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-        body: JSON.stringify({
-          question: cleanedQuestion,
-        }),
-      });
 
       if (!response.ok) {
         throw new Error(`Backend returned status ${response.status}`);

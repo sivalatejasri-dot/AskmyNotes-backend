@@ -3,10 +3,11 @@ services:
     build:
       context: ./frontend
     ports:
-      - "3000:3000"
+      - "5173:5173"
+    command: npm run dev --- --host 0.0.0.0
 
   backend:
     build:
       context: ./backend
     ports:
-      - "5000:5000"
+      - "8000:8000"
