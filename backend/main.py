@@ -16,11 +16,10 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "*",
     "http://localhost:5173",
-    "https://askmynotes-frontend-5k8w.onrender.com",
+    "https://askmynotes-frontend-5k6v.onrender.com",
 ],
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
